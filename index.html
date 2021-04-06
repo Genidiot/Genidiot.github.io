@@ -17,13 +17,15 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+  <meta name="description" content="古来圣贤皆寂寞，惟有饮者留其名">
+<meta property="og:type" content="website">
+<meta property="og:title" content="俯仰随俗">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="俯仰随俗">
+<meta property="og:description" content="古来圣贤皆寂寞，惟有饮者留其名">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Fynn Cheng">
 <meta name="twitter:card" content="summary">
@@ -41,7 +43,7 @@
   };
 </script>
 
-  <title>Hexo</title>
+  <title>俯仰随俗</title>
   
 
 
@@ -92,9 +94,10 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Hexo</h1>
+      <h1 class="site-title">俯仰随俗</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
+      <p class="site-subtitle" itemprop="description">从俗浮沉,与时俯仰</p>
   </div>
 
   <div class="site-nav-right">
@@ -150,11 +153,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Fynn Cheng">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="古来圣贤皆寂寞，惟有饮者留其名">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="俯仰随俗">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -176,7 +179,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-06 15:39:01" itemprop="dateModified" datetime="2021-04-06T15:39:01+08:00">2021-04-06</time>
+                <time title="Modified: 2021-04-06 20:28:46" itemprop="dateModified" datetime="2021-04-06T20:28:46+08:00">2021-04-06</time>
               </span>
 
           
@@ -191,47 +194,14 @@
 
       
           <p>趁着博客刚搭建还没几小时的热乎劲，把我脑袋里的流程先记一下，<br>图片（暂无） 排版（小改） 跳转链接（暂无）<br>需求工具 node.js git hexo github</p>
-<h1 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h1><p>node.js下载<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a><br>过程中大部分默认，网上教程有对过程各部分含义的解释</p>
-<p>/——————–图先欠着—————–/</p>
-<p>安装后在cmd控制台输入path查看环境变量是否成功配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node --version  //查看node.js版本</span><br><span class="line">npm -v          //查看npm版本</span><br></pre></td></tr></table></figure>
-<h1 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h1><p>git下载<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a><br>过程中也是大部分默认，网上教程有对过程各部分含义的解释</p>
-<p>/——————–图先欠着—————–/</p>
-<p>安装后在cmd控制台输入git –version查看版本</p>
-<h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><p>接下来安装hexo<br>安装命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>Windows下可能会报两个warning</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.1 (node_modules\hexo-cli\node_modules\chokidar\node_modules\fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform <span class="keyword">for</span> fsevents@2.3.2: wanted &#123;<span class="string">&quot;os&quot;</span>:<span class="string">&quot;darwin&quot;</span>,<span class="string">&quot;arch&quot;</span>:<span class="string">&quot;any&quot;</span>&#125; (current: &#123;<span class="string">&quot;os&quot;</span>:<span class="string">&quot;win32&quot;</span>,<span class="string">&quot;arch&quot;</span>:<span class="string">&quot;x64&quot;</span>&#125;)</span><br></pre></td></tr></table></figure>
-<p>因为fsevents在Windows下是可选的依赖，不安装也没事，所以直接忽略就行</p>
-<p>接下来找个路径新建一个文件夹作为你存放博客的目录，可以手动，也可以在控制台</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /	<span class="comment">#切换至根目录下 </span></span><br><span class="line">mkdir blog  <span class="comment">#创建目录，一会要装的东西都放在这个目录下，出错也别慌，把这个目录干掉重来，几分钟后还是一条好汉~ </span></span><br><span class="line"><span class="built_in">cd</span> blog <span class="comment">#进入blog目录</span></span><br></pre></td></tr></table></figure>
-
-<p>在blog目录下  在控制台输入以下指令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init   //初始化一个博客，成功控制台会显示INFO  Start blogging with Hexo!</span><br><span class="line">hexo generate/hexo g    //生成静态文件，目录下会多一个public文件夹</span><br><span class="line">hexo server/hexo s      //等价于 hexo server ，hexo 会监视文件变动并自动更新，除修改站点配置文件外，无须重启服务器，直接刷新网页即可生效。</span><br></pre></td></tr></table></figure>
-<p>当控制台显示以下代码的时候</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
-<p>在网页输入<a href="http://localhost:4000就可以查看默认页面（图）">http://localhost:4000就可以查看默认页面（图）</a><br>在控制台按Ctrl+C断开服务<br>以上为本地部署</p>
-<h1 id="部署Github"><a href="#部署Github" class="headerlink" title="部署Github"></a>部署Github</h1><p>接下来创建github page<br>codeing和码云类似<br>GitHub注册，用户名，邮箱，密码，<br>new Repository<br>这个名字的格式必须为{user_name}.github.io, 其中{user_name}必须与你的用户名一样, 这是github pages的特殊命名规范<br>不然之后用这个域名打开会出现404 There isn’t a GitHub Pages site here的问题</p>
-<h1 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h1><p>首先在本地创建ssh key；</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C “your_email@youremail.com”</span><br></pre></td></tr></table></figure>
-<p>后面的<a href="mailto:&#x79;&#x6f;&#x75;&#x72;&#x5f;&#x65;&#x6d;&#97;&#105;&#108;&#x40;&#x79;&#111;&#117;&#114;&#101;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#x79;&#x6f;&#x75;&#x72;&#x5f;&#x65;&#x6d;&#97;&#105;&#108;&#x40;&#x79;&#111;&#117;&#114;&#101;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a>改为你在github上注册的邮箱，之后会要求确认路径和输入密码，我们这使用默认的一路回车就行。成功的话会在C:\Users\当前用户下生成.ssh文件夹，进去，打开id_rsa.pub，复制里面的key。<br>回到github上，进入 Account Settings（账户配置），左边选择SSH Keys，Add SSH Key,title随便填，粘贴在你电脑上生成的key。</p>
-<p>为了验证是否成功，在git bash下输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-<p>如果是第一次的会提示是否continue，输入yes就会看到：You’ve successfully authenticated, but GitHub does not provide shell access 。这就表示已成功连上github。</p>
-<p>还需要设置username和email，因为github每次commit都会记录他们。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config —global user.name “your name”</span><br><span class="line">$ git config —global user.email “your_email@youremail.com”</span><br></pre></td></tr></table></figure>
-<p>安装Git部署插件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save/npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-<p>同样可能会报两个warning</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules\fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform <span class="keyword">for</span> fsevents@2.3.2: wanted &#123;<span class="string">&quot;os&quot;</span>:<span class="string">&quot;darwin&quot;</span>,<span class="string">&quot;arch&quot;</span>:<span class="string">&quot;any&quot;</span>&#125; (current: &#123;<span class="string">&quot;os&quot;</span>:<span class="string">&quot;win32&quot;</span>,<span class="string">&quot;arch&quot;</span>:<span class="string">&quot;x64&quot;</span>&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>打开站点配置文件, 拉到底部, 修改部署配置:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Deployment</span><br><span class="line"> Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo:</span><br><span class="line">    github: git@github.com:masteranthoneyd/masteranthoneyd.github.io.git,master</span><br><span class="line">    coding: git@git.coding.net:ookamiantd/ookamiantd.git,master</span><br></pre></td></tr></table></figure>
-
-<p> 最后控制台 hexo d就可以了</p>
-<p> 中间我出现的遇到的一些问题和比较浪费时间的点<br>1.git的下载比较慢，花了点时间<br>2.node.js和git安装的比较犹豫，安装过程中每个选项都仔细去看了，然后安装完就忘了，<br>3.npm install -g hexo-cli过程出现的两个warning去查了一下<br>4.$ git config —global user.name “your name”<br>  $ git config —global user.email “<a href="mailto:&#x79;&#111;&#117;&#x72;&#x5f;&#101;&#x6d;&#x61;&#x69;&#108;&#x40;&#121;&#x6f;&#117;&#x72;&#x65;&#109;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#109;">&#x79;&#111;&#117;&#x72;&#x5f;&#101;&#x6d;&#x61;&#x69;&#108;&#x40;&#121;&#x6f;&#117;&#x72;&#x65;&#109;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#109;</a>”<br>  以上两个没设置，导致hexo d一直失败<br>5.Repository设置的名称里面和我的用户名有一个字母的差别一直没发现，导致用GitHub域名打开的时候一直404</p>
-<p>最后是我搭建时的几个参考文章<br><a target="_blank" rel="noopener" href="https://yangbingdong.com/2017/build-blog-hexo-base/">https://yangbingdong.com/2017/build-blog-hexo-base/</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f499ad02ab65">https://www.jianshu.com/p/f499ad02ab65</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/CoolSkill/article/details/107137993">https://blog.csdn.net/CoolSkill/article/details/107137993</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39345384/article/details/80095883">https://blog.csdn.net/weixin_39345384/article/details/80095883</a><br><a target="_blank" rel="noopener" href="https://anne416wu.github.io/posts/2727/">https://anne416wu.github.io/posts/2727/</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/05/MyFirstArticle/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -255,11 +225,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Fynn Cheng">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="古来圣贤皆寂寞，惟有饮者留其名">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="俯仰随俗">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -276,6 +246,13 @@
 
               <time title="Created: 2021-04-05 14:21:54" itemprop="dateCreated datePublished" datetime="2021-04-05T14:21:54+08:00">2021-04-05</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-06 20:35:04" itemprop="dateModified" datetime="2021-04-06T20:35:04+08:00">2021-04-06</time>
+              </span>
 
           
 
@@ -289,19 +266,15 @@
 
       
           <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+<p>作为hexo自动生成的默认页面，思来想去，还是不删了，正如标题 Hello World！</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/05/hello-world/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -375,7 +348,7 @@
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Fynn Cheng</p>
-  <div class="site-description" itemprop="description"></div>
+  <div class="site-description" itemprop="description">古来圣贤皆寂寞，惟有饮者留其名</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -416,7 +389,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Fynn Cheng</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
         
@@ -442,7 +415,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
