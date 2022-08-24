@@ -5,38 +5,38 @@ categories:           # 文章分类目录, 多个分类使用[a,b,c]这种格�
 tags:                 # 文章标签
 ---
 
-
 {% blockquote 本人,引言 %}
 趁着博客刚搭建还没几小时的热乎劲，把我脑袋里的流程先记一下，
-图片（暂无） 排版（小改） 跳转链接（暂无）
-需求工具 node.js git hexo github
+图片（暂无/现决定不加） 排版（小改） 跳转链接（暂无/后发现直接贴就能用）
+需求工具 `node.js` `git` `hexo` `github`
 {% endblockquote %}
+
 <!--more-->
 <!--more标签以下的内容要点击“阅读全文”才能看见-->
 
 # 安装Node.js
-node.js下载https://nodejs.org/en/download/  
+`node.js`下载https://nodejs.org/en/download/  
 过程中大部分默认，网上教程有对过程各部分含义的解释
 
-/--------------------图先欠着-----------------/
+/--------------------图先欠着/嫌麻烦不加了-----------------/
 
-安装后在cmd控制台输入path查看环境变量是否成功配置
+安装后在`cmd`控制台输入`path`查看环境变量是否成功配置
 ``` bash
 node --version  //查看node.js版本
-npm -v          //查看npm版本
+npm -v          //查看npm版本，此处可能会有报错，后面有文章解释
 ```
 # 安装Git
-git下载https://git-scm.com/download/win    
+`git`下载https://git-scm.com/download/win    
 过程中也是大部分默认，网上教程有对过程各部分含义的解释
 
-/--------------------图先欠着-----------------/
+/--------------------图先欠着/嫌麻烦不加了-----------------/
 
-安装后在cmd控制台输入git --version查看版本
+安装后在`cmd`控制台输入`git --version`查看版本
 # 安装Hexo
-接下来安装hexo  
+接下来安装`hexo`  
 安装命令
 ```bash
-npm install -g hexo-cli
+npm install -g hexo-cli  //会安装在node.js配置的目录下
 ```
 Windows下可能会报两个warning
 ``` bash
@@ -66,8 +66,9 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.
 在控制台按Ctrl+C断开服务
 以上为本地部署
 # 部署Github
-接下来创建github page      
-codeing和码云类似
+接下来创建github page  
+具体过程查攻略  
+codeing和码云类似  
 GitHub注册，用户名，邮箱，密码，
 new Repository
 这个名字的格式必须为{user_name}.github.io, 其中{user_name}必须与你的用户名一样, 这是github pages的特殊命名规范
@@ -75,11 +76,11 @@ new Repository
 
 
 # 配置Git
-首先在本地创建ssh key；
+首先在本地创建ssh key；控制台输入
 ``` bash
 $ ssh-keygen -t rsa -C “your_email@youremail.com”
 ```
-后面的your_email@youremail.com改为你在github上注册的邮箱，之后会要求确认路径和输入密码，我们这使用默认的一路回车就行。成功的话会在C:\Users\当前用户下生成.ssh文件夹，进去，打开id_rsa.pub，复制里面的key。
+后面的your_email@youremail.com改为你在github上注册的邮箱（后面了解到这好像是个标识符，理论上可以输入别的），之后会要求确认路径和输入密码，我们这使用默认的一路回车就行。成功的话会在C:\Users\当前用户下生成.ssh文件夹，进去，打开id_rsa.pub，复制里面的key。
 回到github上，进入 Account Settings（账户配置），左边选择SSH Keys，Add SSH Key,title随便填，粘贴在你电脑上生成的key。
 
 为了验证是否成功，在git bash下输入：
@@ -115,16 +116,18 @@ deploy:
     coding: git@git.coding.net:ookamiantd/ookamiantd.git,master
 ```
 
- 最后控制台 hexo d就可以了
+ 最后控制台`hexo d`就可以了
 
  中间我出现的遇到的一些问题和比较浪费时间的点
-1.git的下载比较慢，花了点时间
-2.node.js和git安装的比较犹豫，安装过程中每个选项都仔细去看了，然后安装完就忘了，
-3.npm install -g hexo-cli过程出现的两个warning去查了一下
-4.$ git config —global user.name “your name”
-  $ git config —global user.email “your_email@youremail.com”
-  以上两个没设置，导致hexo d一直失败
-5.Repository设置的名称里面和我的用户名有一个字母的差别一直没发现，导致用GitHub域名打开的时候一直404
+1. git的下载比较慢，花了点时间
+2. node.js和git安装的比较犹豫，安装过程中每个选项都仔细去看了，然后安装完就忘了，
+3. `npm install -g hexo-cli`过程出现的两个warning去查了一下
+4.  ```
+    $ git config —global user.name “your name”
+    $ git config —global user.email “your_email@youremail.com” 
+    ```
+    以上两个没设置，导致hexo d一直失败
+5. Repository设置的名称里面和我的用户名有一个字母的差别一直没发现，导致用GitHub域名打开的时候一直404
 
 最后是我搭建时的几个参考文章
 https://yangbingdong.com/2017/build-blog-hexo-base/
